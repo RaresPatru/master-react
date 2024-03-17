@@ -1,0 +1,50 @@
+.wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.wrapper button {
+  background-color: blue;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px 20px;
+}
+
+.wrapper .clicked {
+  background-color: #614101;
+}
+
+.accordion {
+  width: 500px;
+}
+
+.itemInitial {
+  background: blue;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+}
+
+.itemClicked {
+  background: #614101;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+}
+
+.title {
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.content {
+  color: #ffffff;
+  height: auto;
+}

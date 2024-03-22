@@ -56,8 +56,6 @@ export default function RandomColor(): JSX.Element {
       .map((value: string) => parseInt(value.trim()));
     const brightness =
       (rgbArray[0] * 299 + rgbArray[1] * 587 + rgbArray[2] * 114) / 1000;
-    console.log(brightness);
-
     return brightness < 128;
   }
 
@@ -69,31 +67,80 @@ export default function RandomColor(): JSX.Element {
         background: color,
       }}
     >
-      <button
-        onClick={() => {
-          setColor(rgbToHex(color));
-          setTypeOfColor(true);
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "row",
+          gap: "40px",
         }}
       >
-        Create HEX Color
-      </button>
-      <button
-        onClick={() => {
-          setColor(hexToRgb(color));
-          setTypeOfColor(false);
-        }}
-      >
-        Create RGB Color
-      </button>
-      <button
-        onClick={
-          typeOfColor === true
-            ? handleCreateRandomHexColor
-            : handleCreateRandomRgbColor
-        }
-      >
-        Generate Random Color
-      </button>
+        <button
+          style={{
+            fontSize: "16px",
+            color: checkColorBrightness(color) ? "#fff" : "#000",
+            backgroundColor: color,
+            padding: "12px",
+            marginTop: "20px",
+            textShadow: checkColorBrightness(color)
+              ? "-1px -1px 0 black, 1px -1px 0 black, -1px  1px 0 black, 1px  1px 0 black"
+              : "none",
+            borderRadius: "8px",
+            cursor: "pointer",
+            fontWeight: "600",
+          }}
+          onClick={() => {
+            setColor(rgbToHex(color));
+            setTypeOfColor(true);
+          }}
+        >
+          Create HEX Color
+        </button>
+        <button
+          style={{
+            fontSize: "16px",
+            color: checkColorBrightness(color) ? "#fff" : "#000",
+            backgroundColor: color,
+            padding: "12px",
+            marginTop: "20px",
+            textShadow: checkColorBrightness(color)
+              ? "-1px -1px 0 black, 1px -1px 0 black, -1px  1px 0 black, 1px  1px 0 black"
+              : "none",
+            borderRadius: "8px",
+            cursor: "pointer",
+            fontWeight: "600",
+          }}
+          onClick={() => {
+            setColor(hexToRgb(color));
+            setTypeOfColor(false);
+          }}
+        >
+          Create RGB Color
+        </button>
+        <button
+          style={{
+            fontSize: "16px",
+            color: checkColorBrightness(color) ? "#fff" : "#000",
+            backgroundColor: color,
+            padding: "12px",
+            marginTop: "20px",
+            textShadow: checkColorBrightness(color)
+              ? "-1px -1px 0 black, 1px -1px 0 black, -1px  1px 0 black, 1px  1px 0 black"
+              : "none",
+            borderRadius: "8px",
+            cursor: "pointer",
+            fontWeight: "600",
+          }}
+          onClick={
+            typeOfColor === true
+              ? handleCreateRandomHexColor
+              : handleCreateRandomRgbColor
+          }
+        >
+          Generate Random Color
+        </button>
+      </div>
       <div
         style={{
           display: "flex",
@@ -101,6 +148,9 @@ export default function RandomColor(): JSX.Element {
           alignItems: "center",
           fontSize: "60px",
           color: checkColorBrightness(color) ? "#fff" : "#000",
+          textShadow: checkColorBrightness(color)
+            ? "-1px -1px 0 black, 1px -1px 0 black, -1px  1px 0 black, 1px  1px 0 black"
+            : "-1px -1px 0 white, 1px -1px 0 white, -1px  1px 0 white, 1px  1px 0 white",
           marginTop: "50px",
           flexDirection: "column",
           gap: "20px",

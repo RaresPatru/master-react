@@ -39,7 +39,7 @@ export default function ImageSlider({
     setCurrentSlide(currentSlide === 0 ? images.length - 1 : currentSlide - 1);
   }
 
-  function handelNext() {
+  function handleNext() {
     setCurrentSlide(currentSlide === images.length - 1 ? 0 : currentSlide + 1);
   }
 
@@ -76,7 +76,7 @@ export default function ImageSlider({
           ))
         : null}
       <BsArrowRightCircleFill
-        onClick={handelNext}
+        onClick={handleNext}
         className="arrow arrow-right"
       />
       <span className="circle-indicators">

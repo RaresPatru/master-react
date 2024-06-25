@@ -1,9 +1,9 @@
 import "./App.css";
 import Accordion from "./components/accordion";
 import ImageSlider from "./components/image-slider";
-import LoadMoreItems from "./components/load-more-items";
 import RandomColor from "./components/random-color";
 import StarRating from "./components/star-rating";
+import LoadMoreItems from "./components/load-more-items";
 
 function App() {
   return (

@@ -8,6 +8,7 @@ import menus from "./components/tree-view/data";
 import TreeView from "./components/tree-view";
 import QrCodeGenerator from "./components/qr-code-generator";
 import LightDarkMode from "./components/light-dark-theme";
+import ScrollProgress from "./components/scroll-progress";
 
 function App() {
   return (
@@ -27,7 +28,9 @@ function App() {
       {/* QR Code generator using 3'rd party library */}
       {/* <QrCodeGenerator type="text" name="qr-code" /> */}
       {/* Light-Dark theme toggle */}
-      <LightDarkMode />
+      {/* <LightDarkMode /> */}
+      {/* Scroll progress tracking bar */}
+      <ScrollProgress url={`https://dummyjson.com/products`} limit={100} />
     </div>
   );
 }

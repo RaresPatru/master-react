@@ -9,6 +9,7 @@ import TreeView from "./components/tree-view";
 import QrCodeGenerator from "./components/qr-code-generator";
 import LightDarkMode from "./components/light-dark-theme";
 import ScrollProgress from "./components/scroll-progress";
+import TabTest from "./components/custom-tabs/tab-test";
 
 function App() {
   return (
@@ -30,7 +31,9 @@ function App() {
       {/* Light-Dark theme toggle */}
       {/* <LightDarkMode /> */}
       {/* Scroll progress tracking bar */}
-      <ScrollProgress url={`https://dummyjson.com/products`} limit={100} />
+      {/* <ScrollProgress url={`https://dummyjson.com/products`} limit={100} /> */}
+      {/* Custom Tabs */}
+      {TabTest /}
     </div>
   );
 }

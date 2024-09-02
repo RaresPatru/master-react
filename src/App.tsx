@@ -32,8 +32,8 @@ function App() {
       {/* <LightDarkMode /> */}
       {/* Scroll progress tracking bar */}
       {/* <ScrollProgress url={`https://dummyjson.com/products`} limit={100} /> */}
-      {/* Custom Tabs */}
-      {TabTest /}
+      {/* Custom Tabs Component */}
+      <TabTest />
     </div>
   );
 }
